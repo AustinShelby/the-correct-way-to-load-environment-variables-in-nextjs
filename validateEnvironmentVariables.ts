@@ -9,6 +9,7 @@ const environmentVariables = z.object({
 type EnvironmentVariables = z.infer<typeof environmentVariables>;
 
 const projectDir = process.cwd();
+
 env.loadEnvConfig(projectDir);
 
 environmentVariables.parse(process.env);
